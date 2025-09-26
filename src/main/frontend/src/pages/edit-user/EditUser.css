@@ -1,0 +1,102 @@
+/* Base styles applied via container and text elements */
+.edit-user-container,
+.edit-user-title,
+.edit-user-label,
+.edit-user-input,
+.edit-user-button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Main container */
+.edit-user-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  background-color: #f9f9f9;
+}
+
+/* Title */
+.edit-user-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+/* Form layout */
+.edit-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form group */
+.edit-user-form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Label */
+.edit-user-label {
+  flex: 1;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Input */
+.edit-user-input {
+  flex: 2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.edit-user-input:disabled {
+  background-color: #f0f0f0;
+  color: #888;
+}
+
+/* Button */
+.edit-user-button {
+  padding: 10px 16px;
+  background-color: #4a90e2;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.edit-user-button:hover {
+  background-color: #357ab7;
+}
+
+/* Save button specific */
+.edit-user-save-btn {
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .edit-user-form-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .edit-user-label {
+    margin-bottom: 6px;
+  }
+
+  .edit-user-save-btn {
+    align-self: center;
+    width: 100%;
+  }
+}

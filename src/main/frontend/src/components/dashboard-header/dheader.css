@@ -1,0 +1,46 @@
+.dashboard-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem 2rem;
+  min-height: 100px;
+  background: linear-gradient(to right, #51d2e8, #035061);
+  color: #fff;
+  border-bottom: 1px solid #035061;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.header-left {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .header-left {
+    position: static;
+    transform: none;
+    margin-bottom: 0.5rem;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+}

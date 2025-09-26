@@ -1,0 +1,269 @@
+
+
+
+/* Hero Section (Card) */
+.hero {
+  display: flex;
+  justify-content: space-between; /* Ensures text on left, image on right */
+  align-items: center;
+  background-color: #ffffff; /* Card background */
+  padding: 50px 70px; /* Increased padding for better vertical space */
+  width: 80%; /* Takes more horizontal space */
+  max-width: 1200px; /* Prevents excessive width */
+  margin: 60px auto; /* Centers the card */
+  border-radius: 12px; /* Smooth rounded corners */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin-top: 100px;
+}
+
+/* Left Section: Text */
+.para {
+  flex: 1; /* Takes available space */
+  text-align: left;
+}
+
+.para h1 {
+  font-size: 34px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.para h3 {
+  font-size: 22px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.para p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6; /* Improves readability */
+  max-width: 500px; /* Prevents text from stretching too much */
+}
+
+/* Right Section: Image */
+.img1 {
+  width: 320px; /* Set a good width for image */
+  height: auto;
+  border-radius: 10px; /* Slight rounding */
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .hero {
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center;
+      padding: 40px;
+  }
+
+  .para p {
+      max-width: 100%; /* Allow text to stretch in mobile view */
+  }
+
+  .img1 {
+      width: 100%; /* Image takes full width */
+      max-width: 350px;
+      margin-top: 20px;
+  }
+}
+
+
+
+
+
+/* Center the main heading */
+.why {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.why h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Container for the cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Style for each card */
+.card1, .card2, .card3 {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.card1 h1, .card2 h1, .card3 h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* Image Styles */
+.img2 {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.img3, .img4 {
+  width: 80%; /* Smaller size */
+  max-height: 150px;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card1, .card2, .card3 {
+      width: 90%;
+  }
+
+  .img3, .img4 {
+      width: 70%;
+      max-height: 130px;
+  }
+}
+
+/* Hover effect for cards */
+.card1:hover, .card2:hover, .card3:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effect for images */
+.img2:hover, .img3:hover, .img4:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+
+
+/* Center the container */
+.hor-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* Common Card Styles */
+.rec-card1, .rec-card2 {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 85%; /* Takes more horizontal space */
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.rec-card1:hover, .rec-card2:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Styling */
+.img5 img, .img-6 img {
+  width: 320px;
+  height: auto;
+  border-radius: 10px;
+}
+.img7 img{
+  width: 320px;
+  height: 300px;
+  border-radius: 10px;
+}
+.img-9 img{
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+}
+.img-11 img{
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+}
+/* First card: Text on the left, Image on the right */
+.rec-card1 {
+  flex-direction: row; /* Default layout */
+}
+
+/* Second card: Image on the left, Text on the right */
+.rec-card2 {
+  flex-direction: row; /* No reverse, ensures image stays on the left */
+}
+
+/* Text Styling */
+.c1h h1, .c2h h1 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.c1h h2, .c2h h2 {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .rec-card1, .rec-card2 {
+    width: 90%;
+  }
+
+  .img5 img, .img-6 img {
+    
+    max-height: 200px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rec-card1, .rec-card2 {
+    flex-direction: column; /* Stack for small screens */
+    width: 95%;
+    text-align: center;
+  }
+
+  .img5 img, .img-6 img {
+    width: 200px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

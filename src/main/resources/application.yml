@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: verfalarm-app
+  data:
+    mongodb:
+      uri: ${MONGO_URI}
+      database: verfalarm
+      auto-index-creation: true
+  mail:
+    host: ${MAIL_HOST}
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  web:
+    resources:
+      static-locations: classpath:/static/

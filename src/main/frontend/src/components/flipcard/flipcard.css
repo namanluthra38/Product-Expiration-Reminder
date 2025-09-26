@@ -1,0 +1,80 @@
+/* From Uiverse.io by joe-watson-sbf */ 
+.flipcard-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.flipcard-card {
+    background-color: transparent;
+    perspective: 1000px;
+    font-family: sans-serif;
+    width: 300px; /* Increased size */
+    height: 350px; /* Increased size */
+}
+
+.flipcard-title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    color: black; /* Dark color for main headings */
+}
+
+.flipcard-title p {
+    color: black;
+}
+
+.flipcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipcard-card:hover .flipcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flipcard-front, .flipcard-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #6a5acd; /* Violet Border */
+    border-radius: 1rem;
+    color: black; /* Ensure text inside flip cards is black */
+}
+
+.flipcard-front {
+    background: linear-gradient(120deg, #87CEFA 60%, #FFFFFF 88%, #B0C4DE 40%, #6A5ACD 48%);
+    /* Sky Blue, White, Light Slate Blue, and Violet */
+    color: black; /* Ensure front text is black */
+}
+
+.flipcard-back {
+    background: linear-gradient(120deg, #6A5ACD 30%, #B0C4DE 88%, #87CEFA 40%, #FFFFFF 78%);
+    /* Violet, Light Slate Blue, Sky Blue, and White */
+    color: black; /* Ensure back text is black */
+    transform: rotateY(180deg);
+}
+
+/* Circular Dot with Golden Color */
+.flipcard-card::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
